@@ -1,6 +1,21 @@
 #Aaron Jones
-#10/10/23
+#10/31/23
 #Working with lists
+num_grades = int(input("How many grades will you enter? "))
+
+grade_list = []
+
+for grade in range(num_grades):
+    this_grade = int(input("Enter a grade: "))
+    while this_grade < 0 or this_grade > 100:
+        print("Invalid grade Entered.")
+        this_grade = int(input("Enter a grade: "))
+        
+    grade_list.append(this_grade)
+    print(f"{this_grade} has been added to the list")
+
+for grade in grade_list:
+    print(grade)
 
 Module1 = float(input("Enter grade for Module 1: "))
 Module2 = float(input("Enter grade for Module 2: "))
